@@ -84,7 +84,8 @@ var ResizableBox = function (_React$Component) {
         axis = _props.axis,
         width = _props.width,
         height = _props.height,
-        props = _objectWithoutProperties(_props, ['handleSize', 'onResize', 'onResizeStart', 'onResizeStop', 'draggableOpts', 'minConstraints', 'maxConstraints', 'lockAspectRatio', 'axis', 'width', 'height']);
+        handlerComponent = _props.handlerComponent,
+        props = _objectWithoutProperties(_props, ['handleSize', 'onResize', 'onResizeStart', 'onResizeStop', 'draggableOpts', 'minConstraints', 'maxConstraints', 'lockAspectRatio', 'axis', 'width', 'height', 'handlerComponent']);
 
     return _react2.default.createElement(
       _Resizable2.default,
@@ -99,6 +100,7 @@ var ResizableBox = function (_React$Component) {
         minConstraints: minConstraints,
         maxConstraints: maxConstraints,
         lockAspectRatio: lockAspectRatio,
+        handlerComponent: handlerComponent,
         axis: axis
       },
       _react2.default.createElement('div', _extends({ style: { width: this.state.width + 'px', height: this.state.height + 'px' } }, props))
